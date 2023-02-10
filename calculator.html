@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            n1=document.getElementById("n1").value;
+            n2=document.getElementById("n2").value;
+            sl=document.getElementById("sl").value;
+            var ans;
+            if(sl=="ADDITION"){
+                ans=n1+n2;
+            }
+            document.getElementById("result").innerHTML=ans;
+        }
+    </script>
+</head>
+<body>
+    <center><img src="calculator.png" width="300" height="300"></center>
+    <center>
+    <form name="f1" method="get">
+        <table>
+            <tr>
+                <td><label>INSERT FIRST NUMBER</label></td>
+                <td><input type="number" name="n1" id="n1"></td>
+            </tr>
+            <tr>
+                <td><label>INSERT SECOND NUMBER</label></td>
+                <td><input type="number" name="n2" id="n2"></td>
+            </tr>
+            <tr>
+                <td><label>SELECT OPERATION</label></td>
+                <td><select id="sl">
+                    <option>ADDITION</option>
+                    <option>MULTIPLICATION</option>
+                    <option>DIVISION</option>
+                    <option>SUBTRACTION</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label>RESULT</label></td>
+                <td><input type="number" id="result" name="re" id="re"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="add()"><img src="submit.png" width="50" height="50"></button></td>
+                <td><button type="reset" value="reset"><img src="reset.png" width="50" height="50"></button></td>
+            </tr>
+        </table>
+        </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLE>
+        body{
+            background-color: aquamarine;
+        }
+    </STYLE>
+    <script>
+        function fetch(){
+            name = document.f1.t1.value;
+            gender = document.f1.gender.value;
+    
+            check="";
+            c1=document.f1.c1;
+            c2=document.f1.c2;
+            c3=document.f1.c3;
+            c4=document.f1.c4;
+            if(c1.checked==true){
+                check += "Higher Secondary"
+            }
+            if(c2.checked==true){
+                check += "Senior Secondary"
+            }
+            if(c3.checked==true){
+                check += "Under Graduate"
+            }
+
+            if(c4.checked==true){
+                check += "Post Graduate"
+            }
+            edu="The qualifications are: "+check.bold();
+
+            document.getElementById("p1").innerHTML="WELCOME"+" "+name.bold()+" "+"THE GENDER IS"+" "+gender.bold()+edu;
+            
+
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>PERSONAL DETAILS</legend>
+    <form name="f1" method="get">
+        <table>
+            <tr>
+                <td><label>NAME</label></td>
+                <td><input type="text" name="t1" placeholder="write your name here"></td>
+            </tr>
+            <tr>
+                <td><label>EMAIL</label></td>
+                <td><input type="text" placeholder="write your email here"></td>
+            </tr>
+            <tr>
+                <td><label>PASSWORD</label></td>
+                <td><input type="password" placeholder="write your password here"></td>
+            </tr>
+            <tr>
+                <td><label>GENDER</label></td>
+                <td><input type="radio" name="gender" id="male" value="MALE">
+                    <label for="male">MALE</label>
+                    <input type="radio" name="gender" id="female" value="FEMALE">
+                    <label for="male">FEMALE</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>EDUCATION</label></td>
+                <TD>
+                    <input type="checkbox" name="c1" value="hs" id="HS">Higher Secondary
+                    <input type="checkbox" name="c2" value="ss" id="SS">Senior Secondary
+                    <input type="checkbox" name="c3" value="ug" id="UG">Under Graduate
+                    <input type="checkbox" name="c4" value="pg" id="PG">Post Graduate
+                </TD>
+            </tr>
+            <tr>
+                <td><label>SELECT THE TYPE OF SCALE</label></td>
+                <td>
+                    <select>
+                        <option>Percentage</option>
+                        <option>CGPA</option>
+                        <option>GPA</option>
+                        <option>Grade</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>UG</label></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><label>HS</label></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><label>SS</label></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="click me" onclick="fetch();"></td>
+                <!-- <td><button type="button"><a href="form2.html">click me!</a></button></td>
+                <td><a href="form2.html"><img src="imgmap2.jpg" width="50" height="50"></a></td> -->
+            </tr>
+        </table>
+    </form>
+    <p id="p1"></p>
+    </fieldset>
+
+</body>
+</html>
